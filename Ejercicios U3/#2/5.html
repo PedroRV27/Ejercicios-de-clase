@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function paresImpares() {
+
+        function generarNumeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generarArrayAleatorio() {
+            const array = [];
+            for (let i = 0; i < 100; i++) {
+                array.push(generarNumeroAleatorio(1, 1000));
+            }
+            return array;
+        }
+
+        function separarParesImpares(array) {
+            const pares = [];
+            const impares = [];
+            for (const numero of array) {
+                if (numero % 2 === 0) {
+                    pares.push(numero);
+                } else {
+                    impares.push(numero);
+                }
+            }
+            return { pares, impares };
+        }
+
+        const numerosAleatorios = generarArrayAleatorio();
+
+        console.log("Array original:");
+        console.log(numerosAleatorios);
+
+        const { pares, impares } = separarParesImpares(numerosAleatorios);
+
+        const resultado = [...pares, ...impares];
+
+        console.log("Array organizado:");
+        console.log(resultado);
+    }
+
+    paresImpares();
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tabla de Números y Senos</h1>
+
+    <table border="1">
+        <tr>
+            <th>Número</th>
+            <th>Seno</th>
+        </tr>
+        <script>
+            for (let i = 0; i <= 100; i += 10) {
+                const numero = i;
+                const seno = Math.sin((i * Math.PI) / 180);
+
+                document.write("<tr>");
+                document.write("<td>" + numero + "</td>");
+                document.write("<td>" + seno + "</td>");
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+</html>

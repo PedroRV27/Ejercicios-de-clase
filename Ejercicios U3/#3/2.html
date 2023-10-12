@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nombres = ["Juan Pérez", "José García", "María Rodríguez", "Jacqueline Fernández", "Javier López"];
+
+        var nombresj = nombres.filter(nombre => nombre.toUpperCase().startsWith("J"));
+        var iniciales = nombresj.map(nombre => nombre.toUpperCase().split(" ").map(inicial => inicial[0].join("")));
+        var odernados = iniciales.sort();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var numeroAdivinar = parseInt(prompt("J1 introduce un numero:"));
+        var intentos = 0;
+        
+            function jugar() {
+            
+            var numeroJugador2 = parseInt(prompt("J2 introduce un numero:"));
+            intentos++;
+
+            if (isNaN(numeroJugador2)) {
+            alert("Ingresa un numero valido.");
+            jugar(); 
+            } else {
+                if (numeroJugador2 === numeroAdivinar) {
+                alert("Adivinaste el numero en " + intentos + " intentos.");
+                } else if (numeroJugador2 < numeroAdivinar) {
+                alert("El numero es mayor. Intento :" + intentos);
+                jugar();
+                    } else {
+                    alert("El número es menor. Intento :" + intentos);
+                    jugar(); 
+                }
+            }
+        }
+
+
+        jugar();
+
+    </script>
+</body>
+</html>

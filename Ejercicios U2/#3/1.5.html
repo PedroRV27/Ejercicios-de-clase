@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cadenaBienFormada(cad_arg) {
+ 
+        if (!cad_arg) {
+        return "";
+        }
+
+        const primeraLetraMayuscula = cad_arg.charAt(0).toUpperCase();
+        const restoEnMinuscula = cad_arg.slice(1).toLowerCase();
+
+
+        const cadenaFormateada = primeraLetraMayuscula + restoEnMinuscula;
+
+        return cadenaFormateada;
+    }
+
+    const cadenaOriginal = "eSTO Es UnA CaDeNa";
+    const cadenaFormateada = cadenaBienFormada(cadenaOriginal);
+    console.log("Cadena formateada:", cadenaFormateada);
+
+    </script>
+</body>
+</html>

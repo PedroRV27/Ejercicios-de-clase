@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function esPalindromo(cadena) {
+  
+        const cadenaFormateada = cadena.toLowerCase().replace(/\s/g, '');
+
+
+        const cadenaInvertida = cadenaFormateada.split('').reverse().join('');
+
+  
+        return cadenaFormateada === cadenaInvertida;
+    }
+    
+    const cadena = "Anilina";
+    const resultado = esPalindromo(cadena);
+
+    if (resultado) {
+        console.log(`"${cadena}" es un palíndromo.`);
+    } else {
+        console.log(`"${cadena}" no es un palíndromo.`);
+    }
+
+    </script>
+</body>
+</html>

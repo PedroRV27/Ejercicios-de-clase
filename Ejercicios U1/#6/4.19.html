@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    var tamañoCelda = parseInt(prompt("Ingrese el tamaño de la celda (en pixeles):"));
+
+
+    if (!isNaN(tamañoCelda)) {
+        document.write("<div style='width:" + (tamañoCelda * 8) + "px;'>"); 
+  
+    for (var i = 0; i < 8; i++) {
+        document.write("<div style='display:flex;'>"); 
+    
+    for (var j = 0; j < 8; j++) {
+        var color = (i + j) % 2 === 0 ? "white" : "black"; 
+        document.write("<div style='width:" + tamañoCelda + "px; height:" + tamañoCelda + "px; background-color:" + color + ";'></div>");
+    }
+    
+    document.write("</div>"); 
+    }
+  
+    document.write("</div>");
+    }else {
+    alert("   Ingrese un valor valido .");
+    }
+
+    </script>
+</body>
+</html>

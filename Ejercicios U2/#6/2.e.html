@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo de Enlaces e Imágenes</h1>
+    
+    <a href="https://www.ejemplo.com">Enlace de Ejemplo 1</a>
+    <a href="https://www.ejemplo.com">Enlace de Ejemplo 2</a>
+    <a href="https://www.ejemplo.com">Enlace de Ejemplo 3</a>
+    
+    <img src="imagen1.jpg" alt="Imagen 1">
+    <img src="imagen2.jpg" alt="Imagen 2">
+    <img src="imagen3.jpg" alt="Imagen 3">
+    
+    <a name="seccion1">Sección 1</a>
+    <a name="seccion2">Sección 2</a>
+    <a name="seccion3">Sección 3</a>
+    
+    <a href="#" id="mostrarNumeroEnlaces">Mostrar el número de enlaces</a>
+    
+    <p id="resultadoNumeroEnlaces"></p>
+    
+    <script>
+        function mostrarNumeroEnlaces() {
+            const enlaces = document.querySelectorAll('a');
+            const numeroEnlaces = enlaces.length;
+            const resultadoNumeroEnlaces = document.getElementById('resultadoNumeroEnlaces');
+            resultadoNumeroEnlaces.textContent = `El número de enlaces en el documento es: ${numeroEnlaces}`;
+        }
+        const mostrarNumeroEnlacesEnlace = document.getElementById('mostrarNumeroEnlaces');
+        mostrarNumeroEnlacesEnlace.addEventListener('click', mostrarNumeroEnlaces);
+    </script>
+</body>
+</html>

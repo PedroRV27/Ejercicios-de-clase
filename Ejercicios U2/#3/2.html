@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function determinarTipoDeCadena(cadena) {
+ 
+        if (cadena === cadena.toUpperCase()) {
+            return "La cadena esta formada solo por mayusculas.";
+        }
+
+        else if (cadena === cadena.toLowerCase()) {
+            return "La cadena esta formada solo por minusculas.";
+        }
+  
+        else {
+            return "La cadena es una mezcla de mayusculas y minusculas.";
+        }
+    }
+
+
+    const cadenaMayusculas = "ESTOESMAYUSCULAS";
+    const cadenaMinusculas = "estoessonminúsculas";
+    const cadenaMezcla = "eSTO Es UnA CaDeNa";
+
+    console.log(determinarTipoDeCadena(cadenaMayusculas));
+    console.log(determinarTipoDeCadena(cadenaMinusculas));
+    console.log(determinarTipoDeCadena(cadenaMezcla));
+
+    </script>
+</body>
+</html>

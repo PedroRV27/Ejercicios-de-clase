@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fechaHoy = newDate();
+
+        const fecha85 = newDate(fechahoy);
+        fecha85.setDate(fecha85.getDate()+ 85);
+
+        const fecha187 = new Date(fechaHoy);
+        fecha187.setDate(fechaHoy.getDate() - 187);
+
+        fecha187.setHours(fecha187.getHours() - 24);
+
+        const fechaResto = fecha85 - fecha187;
+
+        console.log("fechaHoy:", fechaHoy);
+        console.log("fecha187:", fecha187);
+        console.log("fecha85:", fecha85);
+        console.log("fechaResto:", fechaResto);
+        
+    </script>
+</body>
+</html>

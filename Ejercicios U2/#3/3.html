@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function localizarApariciones(subcadena, cadena) {
+        const apariciones = [];
+        let indice = -1;
+
+        do {
+            indice = cadena.indexOf(subcadena, indice + 1);
+
+            if (indice !== -1) {
+            apariciones.push(indice);
+            }
+        } while (indice !== -1);
+
+        return apariciones;
+    }
+    const cadenaPrincipal = "Esta es una cadena que contiene una subcadena. Esta subcadena es una subcadena.";
+    const subcadenaABuscar = "subcadena";
+
+    const apariciones = localizarApariciones(subcadenaABuscar, cadenaPrincipal);
+    console.log("Apariciones de la subcadena:", apariciones);
+
+    </script>
+</body>
+</html>

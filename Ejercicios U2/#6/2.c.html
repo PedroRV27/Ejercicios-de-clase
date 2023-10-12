@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo de Enlaces e Imágenes</h1>
+    
+    <a href="https://www.google.com">Enlace de Ejemplo</a>
+
+    <img src="imagen1.jpg" alt="Imagen 1">
+    <img src="imagen2.jpg" alt="Imagen 2">
+    <img src="imagen3.jpg" alt="Imagen 3">
+    
+
+    <a name="ancla1">Sección 1</a>
+    <a name="ancla2">Sección 2</a>
+    <a name="ancla3">Sección 3</a>
+    
+
+    <a href="#" id="mostrarNumeroImagenes">Mostrar el número de imágenes</a>
+    
+    <p id="numeroImagenes">El número de imágenes en el documento es: </p>
+    
+    <script>
+
+        function contarImagenes() {
+            const imagenes = document.querySelectorAll('img');
+            const numeroImagenes = imagenes.length;
+            return numeroImagenes;
+        }
+        
+       
+        const mostrarNumeroImagenesEnlace = document.getElementById('mostrarNumeroImagenes');
+        mostrarNumeroImagenesEnlace.addEventListener('click', function() {
+            const numeroImagenes = contarImagenes();
+            const numeroImagenesElemento = document.getElementById('numeroImagenes');
+            numeroImagenesElemento.textContent = `El número de imágenes en el documento es: ${numeroImagenes}`;
+        });
+    </script>
+</body>
+</html>

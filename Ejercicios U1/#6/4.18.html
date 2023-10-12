@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numColumnas = parseInt(prompt("Ingrese el numero de columnas:"));
+        var numFilas = parseInt(prompt("Ingrese el numero de filas:"));
+        var alturaCelda = parseInt(prompt("Ingrese la altura de las celdas (en pixeles):"));
+        var anchuraCelda = parseInt(prompt("Ingrese la anchura de las celdas (en pixeles):"));
+    
+
+        if (!isNaN(numColumnas) && !isNaN(numFilas) && !isNaN(alturaCelda) && !isNaN(anchuraCelda)) {
+  
+          document.write("<table border='1'>");
+  
+          for (var i = 0; i < numFilas; i++) {
+            document.write("<tr>");
+            for (var j = 0; j < numColumnas; j++) {
+              document.write("<td style='height:" + alturaCelda + "px; width:" + anchuraCelda + "px;'></td>");
+            }
+            document.write("</tr>");
+          }
+    
+          document.write("</table>");
+        } else {
+          alert("Ingrese valores validos.");
+        }
+      </script>
+</body>
+</html>l

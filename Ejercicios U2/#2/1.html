@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numeroAleatorio01 = Math.random();
+        document.write("Numero aleatorio entre 0 y 1: " + numeroAleatorio01 + "<br>");
+
+        const numeroAleatorio100to200 = Math.floor(Math.random() * 101) + 100;
+        document.write("Numero aleatorio entre 100 y 200: " + numeroAleatorio100to200 + "<br>");
+
+        const min = parseInt(prompt("Ingrese el valor minimo:"));
+        const max = parseInt(prompt("Ingrese el valor maximo:"));
+
+        if (isNaN(min) || isNaN(max)) {
+            document.write("ingrese valores numuricos validos.");
+        } else {
+            const numeroAleatorioUsuario = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.write("Numero aleatorio entre " + min + " y " + max + ": " + numeroAleatorioUsuario + "<br>");
+        }
+    </script>
+</body>
+</html>

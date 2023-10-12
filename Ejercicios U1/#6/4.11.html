@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generarTabla() {
+        var numColumnas = parseInt(prompt("Ingrese el numero de columnas:"));
+        var alturaCelda = parseInt(prompt("Ingrese la altura de las celdas (en pixeles):"));
+        var anchuraCelda = parseInt(prompt("Ingrese la anchura de las celdas (en pixeles):"));
+    
+        if (!isNaN(numColumnas) && !isNaN(alturaCelda) && !isNaN(anchuraCelda)) {
+            document.write("<table border='1'>");
+    
+            document.write("<tr>");
+
+            // var i = 0;
+            // while (i < numColumnas) {
+            //     document.write("<td style='height:" + alturaCelda + "px; width:" + anchuraCelda + "px;'></td>");
+            //     i++;
+            // }
+
+            for (var i = 0; i < numColumnas; i++) {
+              var color = 'black';
+              if(i>2==0) color ='black';
+              else color ='black ';
+              document.write("<td style='height:" + alturaCelda + "px; width:" + anchuraCelda + "px;'></td>");
+            }
+            document.write("</tr>");
+    
+            document.write("</table>");
+          } else {
+            alert("Por favor, ingrese valores validos.");
+          }
+        }
+    
+        generarTabla();
+      </script>
+</body>
+</html>

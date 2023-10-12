@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function eliminarCaracteresRepetidos(cadena) {
+        const caracteresUnicos = new Set();
+
+        for (let i = 0; i < cadena.length; i++) {
+            const caracter = cadena[i];
+            caracteresUnicos.add(caracter);
+        }
+        const arregloCaracteresUnicos = Array.from(caracteresUnicos);
+        const resultado = arregloCaracteresUnicos.join('');
+
+    return resultado;
+    }
+
+    const cadenaOriginal = "aabbcdefg abc";
+    const cadenaSinRepetidos = eliminarCaracteresRepetidos(cadenaOriginal);
+    console.log("Cadena sin caracteres repetidos:", cadenaSinRepetidos);
+
+    </script>
+</body>
+</html>

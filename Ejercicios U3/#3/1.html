@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [10, 5, 20, 8, 15];
+        console.log("Array de numeros:", numbers);
+        const largestNumber = Math.max(...numbers);
+        console.log("Número más grande:", largestNumber);
+
+        const strings = ["manzana", "banana", "kiwi", "fresa"];
+        console.log("Array de cadenas:", strings);
+        const longestString = strings.reduce((a, b) => (a.length > b.length ? a : b));
+        console.log("Cadena más larga:", longestString);
+
+        const numbers2 = [1, 2, 3, 4, 5, 6];
+        console.log("Array de nmeros:", numbers2);
+        const evenNumbers = numbers2.filter((num) => num % 2 === 0);
+        console.log("Números pares:", evenNumbers);
+
+        const oddNumbers = numbers2.filter((num) => num % 2 !== 0);
+        console.log("Números impares:", oddNumbers);
+
+        const words = ["casa", "feliz", "isla", "piedra","piso"];
+        console.log("Array de palabras:", words);
+        //Al utilizar include devuelve true o false.
+        const wordsWithIs = words.filter((word) => word.includes("is"));
+        console.log("Palabras con 'is':", wordsWithIs);
+
+        const numbers3 = [9, 12, 27, 6];
+        console.log("Array de numeros:", numbers3);
+        const allDivisibleByThree = numbers3.every((num) => num % 3 === 0);
+        console.log("Todos divisibles por tres", allDivisibleByThree);
+
+        const array1 = [1, 2, 3];
+        const array2 = [4, 5, 6];
+        console.log("Array 1:", array1);
+        console.log("Array 2:", array2);
+        const combinedArray = array1.concat(array2);
+        console.log("Arrays combinados:", combinedArray);
+
+        const numbers4 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+        console.log("Array de números:", numbers4);
+        const sortedArray = numbers4.sort((a, b) => a - b);
+        console.log("Array ordenado:", sortedArray);
+
+        const words2 = ["Hola", "Mundo", "JavaScript"];
+        console.log("Array de palabras:", words2);
+        words2.shift();
+        console.log("Array sin la primera palabra:", words2);
+
+        const words3 = ["Mundo", "JavaScript"];
+        console.log("Array de palabras:", words3);
+        words3.unshift("Hola");
+        console.log("Array con una nueva palabra al principio:", words3);
+
+        const fruits = ["manzana", "pera", "uva", "plátano"];
+        console.log("Array de frutas:", fruits);
+        fruits.splice(1, 2, "naranja", "mango");
+        console.log("Array con elementos reemplazados:", fruits);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = parseInt(prompt("Ingrese el coeficiente a:"));
+        const b = parseInt(prompt("Ingrese el coeficiente b:"));
+        const c = parseInt(prompt("Ingrese el coeficiente c:"));
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            document.write(" Ingrese coeficientes validos.");
+        } else {
+            const ecuacion = b * b - 4 * a * c;
+
+            if (ecuacion > 0) {
+                const x1 = (-b + Math.sqrt(ecuacion)) / (2 * a);
+                const x2 = (-b - Math.sqrt(ecuacion)) / (2 * a);
+                document.write(`Las soluciones son: x1 = ${x1}, x2 = ${x2}`);
+            } else if (ecuacion === 0) {
+                const x = -b / (2 * a);
+                document.write(`La solucion es: x = ${x}`);
+            } else {
+                document.write("La ecuación no tiene soluciones reales.");
+            }
+        }
+    </script>
+</body>
+</html>

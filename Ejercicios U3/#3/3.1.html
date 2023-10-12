@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Define the treasure map as a 2D array
+        const treasureMap = [
+        [34, 21, 32, 41, 25],
+        [14, 42, 43, 14, 31],
+        [54, 45, 52, 42, 23],
+        [33, 15, 51, 31, 35],
+        [21, 52, 33, 13, 23]
+        ];
+
+        // Initialize the starting position
+        let currentRow = 0;
+        let currentCol = 0;
+
+        // Function to check if the current position is the treasure
+        const isTreasure = () => treasureMap[currentRow][currentCol] === (currentRow + 1) * 10 + (currentCol + 1);
+
+        // Function to move to the next position based on the clue
+        const moveNext = () => {
+        if (currentRow >= 0 && currentRow < 5 && currentCol >= 0 && currentCol < 5) {
+            console.log(`Visiting cell (${currentRow + 1}, ${currentCol + 1})`);
+            if (isTreasure()) {
+            console.log("Treasure found!");
+            }
+            const nextClue = treasureMap[currentRow][currentCol];
+            currentRow = Math.floor(nextClue / 10) - 1;
+            currentCol = (nextClue % 10) - 1;
+            moveNext();
+        }
+        };
+
+        // Start the search from the initial position
+        moveNext();
+    </script>
+</body>
+</html>

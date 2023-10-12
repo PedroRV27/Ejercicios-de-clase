@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lanzamiento de Dado de 6 Caras</h1>
+    <p>Haz clic en el boton para lanzar el dado 6000 veces:</p>
+    <button id="simular">Lanzar Dado</button>
+    <p id="resultado"></p>
+
+    <script>
+        function lanzamiento() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+        document.getElementById("simular").addEventListener("click", function() {
+            const resultados = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
+            const totalTiradas = 6000;
+
+            for (let i = 0; i < totalTiradas; i++) {
+                const resultado = lanzamiento();
+                resultados[resultado]++;
+            }
+
+            const resultadoList = document.getElementById("resultado");
+            resultadoList.innerHTML = "";
+
+            for (let cara = 1; cara <= 6; cara++) {
+                const li = document.createElement("li");
+                li.textContent = `Cara ${cara}: ${resultados[cara]} veces`;
+                resultadoList.appendChild(li);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lanzamiento de Dado de 6 Caras</h1>
+    <p>Haz clic en el boton para lanzar el dado:</p>
+    <button id="lanzarDado">Lanzar Dado</button>
+    <p id="resultado"></p>
+
+    <script>
+        function lanzamiento() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+            document.getElementById("lanzarDado").addEventListener("click", function() {
+            const resultado = lanzamiento();
+            document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+        });
+    </script>
+</body>
+</html>
